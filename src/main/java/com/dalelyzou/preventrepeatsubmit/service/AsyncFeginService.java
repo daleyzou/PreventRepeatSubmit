@@ -16,8 +16,8 @@ import org.springframework.web.bind.annotation.PostMapping;
 @FeignClient(url = "localhost:8080", name = "async")
 public interface AsyncFeginService {
     @PostMapping("/test/1")
-    RsVo thisIsTestLocation(RequestVo requestVo);
+    String thisIsTestLocation(RequestVo requestVo);
 
     @PostMapping("/test/body/read")
-    RsVo thisIsTestBody(RequestVo requestVo);
+    String thisIsTestBody(RequestVo requestVo);
 }
