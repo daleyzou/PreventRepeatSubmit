@@ -1,8 +1,8 @@
 package com.dalelyzou.preventrepeatsubmit.controller;
 
 import com.dalelyzou.preventrepeatsubmit.aspect.NoRepeatSubmit;
+import com.dalelyzou.preventrepeatsubmit.vo.RequestVo;
 import com.dalelyzou.preventrepeatsubmit.vo.RsVo;
-import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -41,7 +41,7 @@ public class TestController {
      * @return
      * @author daleyzou
      */
-    @PostMapping("/test/{testId}")
+    @PostMapping("/test/body/read")
     @NoRepeatSubmit(location = "thisIsTestBody", seconds = 6, argIndex = 1, name = "param5")
     public RsVo thisIsTestBody(@PathVariable Integer testId, @RequestBody RequestVo requestVo) throws Throwable {
         // 睡眠 5 秒，模拟业务逻辑

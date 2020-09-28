@@ -1,4 +1,6 @@
-package com.dalelyzou.preventrepeatsubmit.controller;
+package com.dalelyzou.preventrepeatsubmit.vo;
+
+import lombok.Data;
 
 /**
  * RequestVo
@@ -7,6 +9,7 @@ package com.dalelyzou.preventrepeatsubmit.controller;
  * @date 2020年09月28日 16:59
  * @version 1.3.1
  */
+@Data
 public class RequestVo {
     String param1;
     String param2;
