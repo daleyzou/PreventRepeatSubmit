@@ -2,7 +2,7 @@ package com.dalelyzou.preventrepeatsubmit.constant;
 
 /**
  * RedisKey
- * @description TODO
+ * @description 锁前缀类
  * @author daleyzou
  * @date 2020年09月28日 16:47
  * @version 1.3.1
