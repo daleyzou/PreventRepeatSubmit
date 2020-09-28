@@ -36,14 +36,13 @@ public class TestController {
     /**
      *  根据请求参数里的 RequestBody 里获取指定名称的变量param5的值进行接口级别防重复点击
      *
-     * @param testId 测试id
      * @param requestVo 请求参数
      * @return
      * @author daleyzou
      */
     @PostMapping("/test/body/read")
-    @NoRepeatSubmit(location = "thisIsTestBody", seconds = 6, argIndex = 1, name = "param5")
-    public RsVo thisIsTestBody(@PathVariable Integer testId, @RequestBody RequestVo requestVo) throws Throwable {
+    @NoRepeatSubmit(location = "thisIsTestBody", seconds = 6, argIndex = 0, name = "param5")
+    public RsVo thisIsTestBody(@RequestBody RequestVo requestVo) throws Throwable {
         // 睡眠 5 秒，模拟业务逻辑
         Thread.sleep(5);
         return RsVo.success("test is return success");
